@@ -1,0 +1,14 @@
+= simple_form_for @trip, html: { multipart: true} do |f|
+    - if @trip.errors.any?
+        @errors
+            %p
+              = @trip.errors.count
+              Prevent this trip from saving
+            %ul
+             - @trip.errors.full_messages.each do |msg|
+               %li = msg
+    .panel-body
+        = f.input :title, input_html: { class: 'form-control' }
+        = f.input :description, input_html: { class: 'form-control' }
+    
+    = f.button :submit, class: "btn btn-primary"
