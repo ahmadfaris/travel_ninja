@@ -13,6 +13,7 @@ gem 'paperclip'
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'cocoon'
+gem 'devise'
 
 
 group :development, :test do

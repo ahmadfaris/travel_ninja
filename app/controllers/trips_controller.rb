@@ -1,4 +1,5 @@
 class TripsController < ApplicationController
+    # include Enumerable
     before_action :find_trip, only: [:show, :edit, :update, :destroy]
    
     def index
@@ -41,7 +42,7 @@ class TripsController < ApplicationController
     private
     
     def trip_params
-        params.require(:trip).permit(:title, :description, :image)
+        params.require(:trip).permit(:title, :description, :image, itineraries_attributes: [:id, :name, :_destroy] , addons_attributes: [:id, :name, :_destroy])
     end
     
     def find_trip

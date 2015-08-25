@@ -1,9 +1,9 @@
-- trip.each_slice(3) do |trips|
+- @trip.each do |trip|
   .row
-    - trips.each do |trip|
-      .col-md.4
-        .trip
-          .image_wrapper
-            =link_to trip do
-              = image_tag trip.image.url(:medium)
-          %h2 = link_to trip.title
+    .col-md.4
+      .trip
+        .image_wrapper
+          = link_to trip do
+            = image_tag trip.image.url(:medium)
+        %h2
+          = link_to trip.title, trip

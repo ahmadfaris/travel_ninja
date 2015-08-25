@@ -1,7 +1,33 @@
-= image_tag @recipe.image.url(:medium), class: "trip_image"
-%h1 = @trip.title
-%p = @trip.description
+.main_content
+  #recipe_top.row
+    .col-md-4
+      = image_tag @trip.image.url(:medium), class: "recipe_image"
+    .col-md-8
+      #recipe_info
+        %h1= @trip.title
+        %p.description= @trip.description
+        %p
+          Submitted by
+          / = @trip.user.email
 
-= link_to "Back", root_path, class: "btn btn-default"
-= link_to "Edit", edit_trip_path, class: "btn btn-default"
-= link_to "Delete", trip_path, method: :delete data: {confirm: "Are you sure?"}, class: "btn btn-default"
+  .row
+    .col-md-6
+      #ingredients
+        %h2 Itineraries
+        %ul
+          - @trip.itineraries.each do |itinerary|
+            %li= itinerary.name
+
+    .col-md-6
+      #directions
+        %h2 Addons
+        %ul
+          - @trip.addons.each do |addon|
+            %li= addon.name
+
+  .row
+    .col-md-12
+      = link_to "Back", root_path, class: "btn btn-default"
+      / - if user_signed_in?
+      /   = link_to "Edit", edit_trip_path, class: "btn btn-default"
+      /   = link_to "Delete", trip_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"
