@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails'
-gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -9,12 +8,19 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc',          group: :doc
-gem 'spring',        group: :development
 gem 'simple_form'
 gem 'paperclip'
 gem 'haml'
 gem 'bootstrap-sass'
 gem 'cocoon'
+
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'byebug'
+  gem 'web-console'
+  gem 'spring'
+end
 
 group :production do
      gem 'pg'
