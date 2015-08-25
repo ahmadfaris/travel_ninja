@@ -4,7 +4,7 @@
     before_action :authenticate_user!, except: [:index, :show]
    
     def index
-        @trip = Trip.all.order("created_at DESC")
+        @trip = Trip.all.order("created_at DESC").page(params[:page]).per(6)
     end
     
     def show

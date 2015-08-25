@@ -28,6 +28,8 @@
     = text_field_tag :search, params[:search]
     = submit_tag "Search"
 
+  = paginate @trip,:theme => 'twitter-bootstrap-3', :pagination_class => "pagination-sm"
+
 - @trip.each_slice(3) do |trips|
   .row
     - trips.each do |trip|

@@ -14,6 +14,8 @@ gem 'haml'
 gem 'bootstrap-sass'
 gem 'cocoon'
 gem 'devise'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 
 group :development, :test do

@@ -33,6 +33,10 @@ body {
   margin-bottom: 5%;
 }
 
+#searchbar{
+  margin: 25px 0px;
+}
+
 .trip {
   background: #345A79;
   border-radius: 20px;
@@ -69,8 +73,22 @@ body {
   margin-bottom: 50px;
 }
 
-#trip_info, #itineraries, #addons {
-  background: #345A79;
+#trip_info{
+  background: #DDDDDD;
+  min-height: 360px;
+  border-radius: 5px;
+  padding: 2em 8%;
+} 
+
+#itineraries{
+  background: #DDDDDD;
+  min-height: 360px;
+  border-radius: 5px;
+  padding: 2em 8%;
+} 
+
+#addons {
+  background: #DDDDDD;
   min-height: 360px;
   border-radius: 5px;
   padding: 2em 8%;
