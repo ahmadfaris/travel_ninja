@@ -1,5 +1,6 @@
 class Trip < ActiveRecord::Base
   belongs_to :user
+  belongs_to :category
   has_many :itineraries
   has_many :addons
 

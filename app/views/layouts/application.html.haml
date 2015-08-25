@@ -24,6 +24,9 @@
     - flash.each do |name, msg|
       = content_tag :div, msg, class: "alert"
 
+    - Category.all.each do |category|
+      = link_to category.name, trips_path(category: category.name)
+
     = yield
 
   %footer

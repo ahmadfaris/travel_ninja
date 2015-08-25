@@ -77,21 +77,21 @@ body {
   background: #DDDDDD;
   min-height: 360px;
   border-radius: 5px;
-  padding: 2em 8%;
+  padding: 50px;;
 } 
 
 #itineraries{
   background: #DDDDDD;
   min-height: 360px;
   border-radius: 5px;
-  padding: 2em 8%;
+  padding: 50px;
 } 
 
 #addons {
   background: #DDDDDD;
   min-height: 360px;
   border-radius: 5px;
-  padding: 2em 8%;
+  padding: 50px;
 }
 
 .recipe_image {
@@ -111,7 +111,7 @@ body {
   }
 }
 
-#itineraries, #addons {
+/*#itineraries, #addons {
   margin-bottom: 50px;
   ul, ol {
     padding-left: 18px;
@@ -120,7 +120,7 @@ body {
       border-bottom: 1px solid #EAEAEA;
     }
   }
-}
+}*/
 
 .form-inline {
   margin-top: 15px;
