@@ -1,2 +1,4 @@
 - trip.each do |trip|
+  = link_to trip do
+    =image_tag trip.image.url(:medium)
   %h2 = link_to trip.title
