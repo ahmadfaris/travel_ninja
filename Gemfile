@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'paperclip'
 gem 'haml'
 gem 'bootstrap-sass'
+gem 'cocoon'
 
 group :production do
      gem 'pg'
