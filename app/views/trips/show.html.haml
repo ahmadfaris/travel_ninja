@@ -1,9 +1,9 @@
 .main_content
-  #recipe_top.row
+  #trip_top.row
     .col-md-4
       = image_tag @trip.image.url(:medium), class: "recipe_image"
     .col-md-8
-      #recipe_info
+      #trip_info
         %h1= @trip.title
         %p.description= @trip.description
         %p
