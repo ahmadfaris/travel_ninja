@@ -16,6 +16,8 @@ gem 'cocoon'
 gem 'devise'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 
 group :development, :test do
