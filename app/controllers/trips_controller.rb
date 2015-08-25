@@ -1,6 +1,7 @@
-class TripsController < ApplicationController
+ class TripsController < ApplicationController
     # include Enumerable
     before_action :find_trip, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, except: [:index, :show]
    
     def index
         @trip = Trip.all.order("created_at DESC")
@@ -10,11 +11,11 @@ class TripsController < ApplicationController
     end
     
     def new
-        @trip = Trip.new
+        @trip = current_user.trips.build
     end
     
     def create
-        @trip = Trip.new(trip_params)
+        @trip = current_user.trips.build(trip_params)
         
         if @trip.save
             redirect_to @trip, notice: "Successfully create new trip"
