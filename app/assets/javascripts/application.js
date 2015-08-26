@@ -22,3 +22,10 @@ $(document).ready(function() {
       data("association-insertion-position", 'before').
       data("association-insertion-node", 'this');
 });
+
+
+$(document).ready(function(){
+  $('.carousel').carousel({
+    interval: 2000
+  })
+});    
