@@ -24,9 +24,9 @@
       %span.icon-next
 
 #searchbar.col-md-12
-  = form_tag trips_path, :method => 'get' do
-    = text_field_tag :search, params[:search]
-    = submit_tag "Search"
+  = form_tag(trips_path, :method => "get", id: "search-form", html: {class: 'form-group'}) do
+    = text_field_tag :search, params[:search], placeholder: "Search Trips", class: "form-control"
+    = submit_tag "Search", :class => 'btn btn-default',:name => nil
 
   = paginate @trip,:theme => 'twitter-bootstrap-3', :pagination_class => "pagination-sm"
 

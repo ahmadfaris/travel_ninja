@@ -6,6 +6,7 @@
     def index
       if params[:category].blank?
         @trip = Trip.all.order("created_at DESC").page(params[:page]).per(6)
+        @trip = Trip.where(["title LIKE ?", "%#{params[:search]}%"]).page(params[:page]).per(6)
       else
         @category_id = Category.find_by(name: params[:category]).id
         @trip = Trip.where(category_id: @category_id).order("created_at DESC").page(params[:page]).per(6)
